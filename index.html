@@ -1,0 +1,175 @@
+<html>
+
+<head>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <link href="style.css" rel="stylesheet">
+    <script src="main.js"></script>
+</head>
+
+<body>
+    <div class="table models-table">
+        <div class="models-search_initial bg--contrast animate">
+            <div class="dropdown">
+                <label for="category"><span class="sr-only"></span></label>
+                <input class="dropdown-input bg--shaded-lighter" type="text" id="models_canopy" placeholder="" data-id="" readonly="">
+                <span class="dropdown-arrow bg--shaded-lighter color--brand" aria-haspopup="true" aria-expanded="false" aria-controls="dropdown-list"><span class="sr-only"></span><i class="fa fa-caret-down" aria-hidden="true"></i></span>
+                <div class="dropdown-list bg--shaded-lighter animate">
+                    <ul class="dropdown-items animate" role="menu">
+
+                        <li class="dropdown-item animate" role="menuitem"><a href="" class="dropdown-link" data-id="" data-text="C or No C" aria-label="C or No C">C or No C</a></li>
+
+                        <li class="dropdown-item animate" role="menuitem"><a href="" class="dropdown-link" data-id="^C" data-text="No C" aria-label="No C">No C</a></li>
+
+                        <li class="dropdown-item animate" role="menuitem"><a href="" class="dropdown-link" data-id="C" data-text="C" aria-label="C">C</a></li>
+
+                    </ul>
+                </div>
+            </div>
+            <div class="dropdown">
+                <label for="category"><span class="sr-only"></span></label>
+                <input class="dropdown-input bg--shaded-lighter" type="text" id="models_coupler" placeholder="" data-id="" readonly="">
+                <span class="dropdown-arrow bg--shaded-lighter color--brand" aria-haspopup="true" aria-expanded="false" aria-controls="dropdown-list"><span class="sr-only"></span><i class="fa fa-caret-down" aria-hidden="true"></i></span>
+                <div class="dropdown-list bg--shaded-lighter animate">
+                    <ul class="dropdown-items animate" role="menu">
+
+                        <li class="dropdown-item animate" role="menuitem"><a href="" class="dropdown-link" data-id="" data-text="H or No H" aria-label="H or No H">H or No H</a></li>
+
+                        <li class="dropdown-item animate" role="menuitem"><a href="" class="dropdown-link" data-id="^H" data-text="No H" aria-label="No H">No H</a></li>
+
+                        <li class="dropdown-item animate" role="menuitem"><a href="" class="dropdown-link" data-id="H" data-text="H" aria-label="H">H</a></li>
+
+                    </ul>
+                </div>
+            </div>
+            <div class="dropdown">
+                <label for="category"><span class="sr-only"></span></label>
+                <input class="dropdown-input bg--shaded-lighter" type="text" id="models_flow" placeholder="" data-id="" readonly="">
+                <span class="dropdown-arrow bg--shaded-lighter color--brand" aria-haspopup="true" aria-expanded="false" aria-controls="dropdown-list"><span class="sr-only"></span><i class="fa fa-caret-down" aria-hidden="true"></i></span>
+                <div class="dropdown-list bg--shaded-lighter animate">
+                    <ul class="dropdown-items animate" role="menu">
+
+                        <li class="dropdown-item animate" role="menuitem"><a href="" class="dropdown-link" data-id="" data-text="F or No F" aria-label="F or No F">F or No F</a></li>
+
+                        <li class="dropdown-item animate" role="menuitem"><a href="" class="dropdown-link" data-id="^F" data-text="No F" aria-label="No F">No F</a></li>
+
+                        <li class="dropdown-item animate" role="menuitem"><a href="" class="dropdown-link" data-id="F" data-text="F" aria-label="F">F</a></li>
+
+                    </ul>
+                </div>
+            </div>
+            <div class="dropdown">
+                <label for="category"><span class="sr-only"></span></label>
+                <input class="dropdown-input bg--shaded-lighter" type="text" id="models_control" placeholder="" data-id="" readonly="">
+                <span class="dropdown-arrow bg--shaded-lighter color--brand" aria-haspopup="true" aria-expanded="false" aria-controls="dropdown-list"><span class="sr-only"></span><i class="fa fa-caret-down" aria-hidden="true"></i></span>
+                <div class="dropdown-list bg--shaded-lighter animate">
+                    <ul class="dropdown-items animate" role="menu">
+
+                        <li class="dropdown-item animate" role="menuitem"><a href="" class="dropdown-link" data-id="" data-text="R or No R" aria-label="R or No R">R or No R</a></li>
+
+                        <li class="dropdown-item animate" role="menuitem"><a href="" class="dropdown-link" data-id="^R" data-text="No R" aria-label="No R">No R</a></li>
+
+                        <li class="dropdown-item animate" role="menuitem"><a href="" class="dropdown-link" data-id="R" data-text="R" aria-label="R">R</a></li>
+
+                    </ul>
+                </div>
+            </div>
+            <div class="filter-reset" style="display: none;">
+                <a href="#" class="filter-reset-options title--xs color--brand animate active">
+                    <i class="fa fa-times" aria-hidden="true"></i>reset options
+                </a>
+            </div>
+        </div>
+
+        
+        <ul class="table-body" id="models_table">
+            <li class="table-body__row animate" style="">
+                <span class="table-body__cell table-body__cell__stack table__cell--s title--xs buckets" data-th="models" style="height: 47px;">NAMEF</span>
+                
+            </li>
+            <li class="table-body__row animate" style="">
+                <span class="table-body__cell table-body__cell__stack table__cell--s title--xs buckets" data-th="models" style="height: 47px;">NAMEFR</span>
+                
+            </li>
+            <li class="table-body__row animate" style="">
+                <span class="table-body__cell table-body__cell__stack table__cell--s title--xs buckets" data-th="models" style="height: 47px;">NAMEH</span>
+                
+            </li>
+            <li class="table-body__row animate" style="">
+                <span class="table-body__cell table-body__cell__stack table__cell--s title--xs buckets" data-th="models" style="height: 47px;">NAMEHC</span>
+                
+            </li>
+            <li class="table-body__row animate" style="">
+                <span class="table-body__cell table-body__cell__stack table__cell--s title--xs buckets" data-th="models" style="height: 47px;">NAMEHF</span>
+                
+            </li>
+            <li class="table-body__row animate" style="">
+                <span class="table-body__cell table-body__cell__stack table__cell--s title--xs buckets" data-th="models" style="height: 47px;">NAMEHFC</span>
+               
+            </li>
+            <li class="table-body__row animate" style="">
+                <span class="table-body__cell table-body__cell__stack table__cell--s title--xs buckets" data-th="models" style="height: 47px;">NAMEHFR</span>
+                
+            </li>
+            <li class="table-body__row animate" style="">
+                <span class="table-body__cell table-body__cell__stack table__cell--s title--xs buckets" data-th="models" style="height: 47px;">NAMEHFRC</span>
+                
+            </li>
+            <li class="table-body__row animate" style="">
+                <span class="table-body__cell table-body__cell__stack table__cell--s title--xs buckets" data-th="models" style="height: 47px;">NAMEHR</span>
+                
+            </li>
+            <li class="table-body__row animate" style="">
+                <span class="table-body__cell table-body__cell__stack table__cell--s title--xs buckets" data-th="models" style="height: 47px;">NAMEHRC</span>
+                
+            </li>
+            <li class="table-body__row animate" style="">
+                <span class="table-body__cell table-body__cell__stack table__cell--s title--xs buckets" data-th="models" style="height: 64px;">NAMER</span>
+                
+            </li>
+            <li class="table-body__row animate" style="">
+                <span class="table-body__cell table-body__cell__stack table__cell--s title--xs buckets" data-th="models" style="height: 47px;">ITEMFR</span>
+                
+            </li>
+            <li class="table-body__row animate" style="">
+                <span class="table-body__cell table-body__cell__stack table__cell--s title--xs buckets" data-th="models" style="height: 47px;">ITEMH</span>
+                
+            </li>
+            <li class="table-body__row animate" style="">
+                <span class="table-body__cell table-body__cell__stack table__cell--s title--xs buckets" data-th="models" style="height: 47px;">ITEMHC</span>
+                
+            </li>
+            <li class="table-body__row animate" style="">
+                <span class="table-body__cell table-body__cell__stack table__cell--s title--xs buckets" data-th="models" style="height: 47px;">ITEMHF</span>
+                
+            </li>
+            <li class="table-body__row animate" style="">
+                <span class="table-body__cell table-body__cell__stack table__cell--s title--xs buckets" data-th="models" style="height: 47px;">ITEMHFC</span>
+                
+            </li>
+            <li class="table-body__row animate" style="">
+                <span class="table-body__cell table-body__cell__stack table__cell--s title--xs buckets" data-th="models" style="height: 47px;">ITEMHFR</span>
+                
+            </li>
+            <li class="table-body__row animate" style="">
+                <span class="table-body__cell table-body__cell__stack table__cell--s title--xs buckets" data-th="models" style="height: 47px;">ITEMHFRC</span>
+                
+            </li>
+            <li class="table-body__row animate" style="">
+                <span class="table-body__cell table-body__cell__stack table__cell--s title--xs buckets" data-th="models" style="height: 47px;">ITEMHR</span>
+                
+            </li>
+            <li class="table-body__row animate" style="">
+                <span class="table-body__cell table-body__cell__stack table__cell--s title--xs buckets" data-th="models" style="height: 47px;">ITEMHRC</span>
+                
+            </li>
+            <li class="table-body__row animate" style="">
+                <span class="table-body__cell table-body__cell__stack table__cell--s title--xs buckets" data-th="models" style="height: 47px;">ITEMR</span>
+                
+            </li>
+        </ul>
+    </div>
+</body>
+
+</html>
